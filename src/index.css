@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.link{
+    @apply py-2 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:w-full hover:before:h-0.5 hover:before:bg-boder-gradient relative
+    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:w-full hover:after:h-3 hover:after:left-0 hover:after:bg-link-gradient
+    ;
+
+}
+
+.nav-remove{
+    @apply md:flex gap-5 hidden items-center;
+}
+
+.nav-display{
+    @apply flex;
+}
+
+.toggler-active{
+    @apply w-full h-0.5 bg-white -rotate-45 origin-custom
+}
+
+.toggler{
+    @apply w-full h-0.5 bg-white
+}
