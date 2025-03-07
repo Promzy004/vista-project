@@ -3,19 +3,25 @@
 @tailwind utilities;
 
 
+@layer base{
+    *{
+        @apply box-border;
+    }
+}
+
 .link{
-    @apply py-2 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:w-full hover:before:h-0.5 hover:before:bg-boder-gradient relative
+    @apply py-2 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:w-full hover:before:h-0.5 hover:before:bg-border-gradient relative
     hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:w-full hover:after:h-3 hover:after:left-0 hover:after:bg-link-gradient
     ;
 
 }
 
-.nav-remove{
-    @apply md:flex gap-5 hidden items-center;
+.nav-display{
+    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto flex absolute items-start left-0 top-20 flex-col w-full h-screen bg-black;
 }
 
-.nav-display{
-    @apply flex;
+.nav-remove{
+    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto hidden;
 }
 
 .toggler-active{

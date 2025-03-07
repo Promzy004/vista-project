@@ -1,6 +1,6 @@
 const TrustedTeams = () => {
     return (
-        <div className="text-white w-full flex flex-col items-center gap-5">
+        <div className="text-white pb-32 w-full flex flex-col items-center gap-5">
             <h3 className="text-xl">Trusted by startups and teams at</h3>
             <div className="w-3/4 text-2xl text-gray-400 flex flex-wrap gap-5 justify-center">
                 <div class="items item1">Freshly Folded</div>|
