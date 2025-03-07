@@ -17,7 +17,7 @@
 }
 
 .nav-display{
-    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto flex absolute items-start left-0 top-20 flex-col w-full h-screen bg-black;
+    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto flex absolute items-start left-0 top-[70px] pt-5 flex-col w-full h-screen bg-black;
 }
 
 .nav-remove{

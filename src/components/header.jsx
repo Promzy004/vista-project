@@ -6,23 +6,24 @@ const Header = () => {
     const[nav, setNav] = useState(false);
     const[navBorder, setNAvBorder] = useState(false)
 
+    //useEffect that runs once to make the window active
     useEffect(() => {
-        window.addEventListener('scroll', () => {
+
+        //funtion that occur when the event takes place
+        const handleScroll = () => {
             if(window.scrollY > 50) {
                 setNAvBorder(true);
             } else {
                 setNAvBorder(false);
             }
-        })
+        }
 
+        //adding the scroll event to window, this event becomes active even though the useEffect run once
+        window.addEventListener('scroll', handleScroll)
+
+        //this is a cleanup, it removes the event when it is unmount
         return () => {
-            window.removeEventListener("scroll", () => {
-                if(window.scrollY > 50) {
-                    setNAvBorder(true);
-                } else {
-                    setNAvBorder(false);
-                }
-            });
+            window.removeEventListener("scroll", handleScroll);
           };
     }, [])
 
@@ -41,9 +42,7 @@ const Header = () => {
                 <a href="" className="link">About</a>
                 <a href="" className="link">Contact</a>
                 <a href="" className="md:ms-5 md:mt-0 mt-7">
-                    <button 
-                        className="bg-neutral-600 py-1 px-4 rounded-full hover:bg-custom-orange duration-500 ease-in-out "
-                    >
+                    <button className="bg-neutral-600 py-1 px-4 rounded-full hover:bg-custom-orange duration-500 ease-in-out ">
                         Get started
                     </button>
                 </a>

@@ -10,9 +10,7 @@ const Hero = () => {
                 <Button href='facebook.com'/>
             </div>
             <div className="relative lg:w-4/5 w-[95%] box-border lg:h-[650px] sm:h-96 h-80">
-                <div className="w-full h-full bg-custom-image bg-cover border-2 border-b-0 border-neutral-800 rounded-2xl after:content-[''] after:w-[100%] after:px-32 after:h-48 after:absolute after:bottom-0 after:left-0 after:bg-hero-gradient">
-                    {/* <img src={hero} alt="" className="w-full" /> */}
-                </div>
+                <div className="w-full h-full bg-custom-image bg-cover border-2 border-b-0 border-neutral-800 rounded-2xl after:content-[''] after:w-[100%] after:px-32 after:h-48 after:absolute after:bottom-0 after:left-0 after:bg-hero-gradient"></div>
             </div>
         </section>
     );
