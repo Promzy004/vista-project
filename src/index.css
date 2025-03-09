@@ -7,27 +7,198 @@
     *{
         @apply box-border;
     }
+    /* body{
+        @apply overflow-x-hidden
+    } */
 }
 
+
+/*  ===========================================================================Header section */
 .link{
-    @apply py-2 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:w-full hover:before:h-0.5 hover:before:bg-border-gradient relative
-    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:w-full hover:after:h-3 hover:after:left-0 hover:after:bg-link-gradient
+    @apply 
+    py-2 
+    relative
     ;
-
 }
 
+/* ===================navlink hover effect */
+.link:hover{
+    @apply
+    before:content-[''] 
+    before:absolute 
+    before:bottom-0 
+    before:w-full 
+    before:h-[1px] 
+    before:bg-border-gradient
+    after:content-[''] 
+    after:absolute 
+    after:bottom-0 
+    after:w-full 
+    after:h-3 
+    after:left-0 
+    after:bg-light-effect-bottom
+    after:opacity-50
+}
+
+/*   ========================for smaller screen when toggling the nav to show */
 .nav-display{
-    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto flex absolute items-start left-0 top-[70px] pt-5 flex-col w-full h-screen bg-black;
+    @apply 
+    md:flex 
+    md:relative 
+    md:gap-5 
+    md:items-center 
+    md:flex-row 
+    md:top-0 
+    md:w-auto 
+    md:h-auto
+    md:px-0 
+    px-10
+    flex 
+    absolute 
+    items-start 
+    left-0 
+    top-[60px] 
+    pt-5 
+    flex-col 
+    w-full 
+    h-screen 
+    bg-black;
 }
 
+/*   ========================for smaller screen when toggling the nav not to show */
 .nav-remove{
-    @apply md:flex md:relative md:gap-5 md:items-center md:flex-row md:top-0 md:w-auto md:h-auto hidden;
+    @apply 
+    md:flex 
+    md:relative 
+    md:gap-5 
+    md:items-center 
+    md:flex-row 
+    md:top-0 
+    md:w-auto 
+    md:h-auto 
+    hidden;
 }
 
-.toggler-active{
-    @apply w-full h-0.5 bg-white -rotate-45 origin-custom
+
+.hero-box{
+    @apply 
+    w-full 
+    h-full 
+    bg-custom-image 
+    bg-cover 
+    border-2 
+    border-b-0 
+    border-neutral-800 
+    rounded-2xl 
+    after:content-[''] 
+    after:w-[100%] 
+    after:px-32 
+    after:h-48 
+    after:absolute 
+    after:bottom-0 
+    after:left-0 
+    after:bg-custom-fade
+
 }
 
-.toggler{
-    @apply w-full h-0.5 bg-white
+/*  ===========================================================================crm dashboard section */
+
+.agenda-container{
+    @apply 
+    h-14 
+    cursor-pointer 
+    relative 
+    text-white 
+    xl:w-[60%] 
+    lg:w-[70%] 
+    md:w-[85%] 
+    w-[95%]
+    sm:px-12 
+    px-2
+    mx-auto
+    mb-10 
+    flex  
+    justify-between 
+    after:content-[''] 
+    after:absolute 
+    after:w-full 
+    after:bottom-0 
+    after:left-0 
+    after:h-[1px] 
+    after:bg-border-gradient2
+}
+
+.agenda-heading{
+    @apply 
+    px-4 
+    lg:text-xl 
+    md:text-lg
+    sm:text-base  
+    text-sm 
+    text-center 
+}
+
+.dashboard-box{
+    @apply 
+    relative 
+    mx-auto 
+    xl:w-2/3
+    lg:w-3/4 
+    md:w-[90%] 
+    w-[95%] 
+    box-border 
+    lg:h-[550px] 
+    sm:h-[700px] 
+    h-64 
+    overflow-hidden
+    after:content-[''] 
+    after:w-[100%] 
+    after:px-32 
+    after:h-52 
+    after:absolute 
+    after:bottom-0 
+    after:left-0 
+    after:bg-custom-fade
+}
+
+
+/*                      border line with a flashy light on it effect */
+.border-light-bottom{
+    @apply
+    after:content-[''] 
+    after:absolute 
+    after:w-full 
+    after:bottom-0 
+    after:left-0 
+    after:h-[1px] 
+    after:bg-border-gradient 
+    after:z-10 
+    before:content-[''] 
+    before:absolute 
+    before:w-full 
+    before:bottom-0 
+    before:left-0 
+    before:h-[18px] 
+    before:bg-light-effect-bottom
+    before:opacity-50
+}
+
+.border-light-top{
+    @apply
+    after:content-[''] 
+    after:absolute 
+    after:w-full 
+    after:top-0 
+    after:left-0 
+    after:h-[1px] 
+    after:bg-border-gradient 
+    after:z-10 
+    before:content-[''] 
+    before:absolute 
+    before:w-full 
+    before:top-0 
+    before:left-0 
+    before:h-10 
+    before:bg-light-effect-top
+    before:opacity-50
 }
