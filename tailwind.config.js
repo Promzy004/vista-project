@@ -20,6 +20,8 @@
         //grey border gradient
         'border-gradient2': `linear-gradient(to right, transparent 0%, ${colors.neutral[600]} 20%, ${colors.neutral[600]} 80%, transparent 100%)`,
 
+        'border-3': 'linear-gradient(to bottom, transparent 0%,  rgb(240, 70, 6) 20%, rgb(240, 70, 6) 80%, transparent 100%)',
+
         //light on border gradient bottom
         'light-effect-bottom': 'radial-gradient(ellipse at bottom, rgba(255,87,34,0.7) 0%, rgba(0,0,0,0) 80%)',
 

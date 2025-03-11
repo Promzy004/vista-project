@@ -6,6 +6,7 @@ import img2 from '../assets/images/lead-management.svg';
 import img3 from '../assets/images/image3.png';
 import DashboardSection from "../components/dashboard_section";
 import AnalyticSection from "../components/analytic_section";
+import NoteSection from "../components/notes_section";
 
 
 const Home = () => {
@@ -52,6 +53,32 @@ const Home = () => {
     ]
 
 
+    //list of notes section datas
+    const notes_data = [
+        {
+            title: 'Categorize contacts',
+            desc: "Monitor your team's productivity by viewing completed tasks and active projects.",
+            image: img1,
+            icon: 1,
+            id: 1
+        },
+        {
+            title: 'Organize meeting notes',
+            desc: "Use detailed task views, checklists, and due dates to stay on top of your projects.",
+            image: img2,
+            icon: 2,
+            id: 2
+        },
+        {
+            title: 'Collaborate in real time',
+            desc: "Assign tasks, share notes, and engage in real-time discussions with your team.",
+            image: img3,
+            icon: 3,
+            id: 3
+        },
+    ]
+
+
 
     return (
         <div>
@@ -70,6 +97,7 @@ const Home = () => {
             </section>
             <div>
                 <SubHeading text="Notes" sub_text="Capture meeting notes & collaborate with ease" desc_text="Organize all of your notes and contact in one central place" />
+                <NoteSection  data={notes_data}/>
             </div>
             {/* <div>
                 <SubHeading text="More features" sub_text="And so much more" desc_text="Our CRM can do it all. Don't believe us? Try it yourself" />
