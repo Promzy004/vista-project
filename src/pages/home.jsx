@@ -25,7 +25,7 @@ const Home = () => {
         },
         {
             title: 'Lead management',
-            image: img3,
+            image: img2,
             id: 3
         },
     ]
@@ -47,7 +47,7 @@ const Home = () => {
         {
             title: 'Lead management',
             desc: "Monitor your team's productivity by viewing completed tasks and active projects.",
-            image: img3,
+            image: img2,
             id: 3
         },
     ]
@@ -72,7 +72,7 @@ const Home = () => {
         {
             title: 'Collaborate in real time',
             desc: "Assign tasks, share notes, and engage in real-time discussions with your team.",
-            image: img3,
+            image: img2,
             icon: 3,
             id: 3
         },
@@ -95,14 +95,14 @@ const Home = () => {
                 <SubHeading text="Analytics" sub_text="Gain actionable insights to drive your business forward" desc_text="Analyze all the data with beautiful dashboards" />
                 <AnalyticSection data={analytics_data} />
             </section>
-            <div>
+            <section className="w-full mb-36">
                 <SubHeading text="Notes" sub_text="Capture meeting notes & collaborate with ease" desc_text="Organize all of your notes and contact in one central place" />
                 <NoteSection  data={notes_data}/>
-            </div>
-            {/* <div>
+            </section>
+            <div>
                 <SubHeading text="More features" sub_text="And so much more" desc_text="Our CRM can do it all. Don't believe us? Try it yourself" />
             </div>
-            <div></div> */}
+            <div></div>
         </div>
     );
 }

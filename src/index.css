@@ -161,6 +161,34 @@
     after:bg-custom-fade
 }
 
+.notes-box{
+    @apply 
+    relative 
+    w-[95%] 
+    box-border 
+    lg:h-80
+    sm:h-[700px] 
+    h-64 
+    overflow-hidden
+    before:content-[''] 
+    before:w-32
+    before:h-full
+    before:py-32 
+    before:z-10
+    before:absolute 
+    before:top-0 
+    before:right-0 
+    before:bg-custom-fade-right
+    after:content-[''] 
+    after:w-[100%] 
+    after:px-32 
+    after:h-52 
+    after:absolute 
+    after:bottom-0 
+    after:left-0 
+    after:bg-custom-fade
+}
+
 
 /*                      border line with a flashy light on it effect */
 .border-light-bottom{
@@ -181,6 +209,25 @@
     before:h-[18px] 
     before:bg-light-effect-bottom
     before:opacity-50
+}
+
+.border-light-left{
+    @apply
+    before:content-[''] 
+    before:left-0 
+    before:top-0 
+    before:absolute 
+    before:w-[2px] 
+    before:h-full 
+    before:bg-border-3
+    after:content-[''] 
+    after:absolute 
+    after:w-[15px] 
+    before:bottom-0 
+    after:left-0 
+    after:h-full 
+    after:bg-light-effect-left
+    after:opacity-50
 }
 
 .border-light-top{

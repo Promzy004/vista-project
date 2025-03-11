@@ -18,27 +18,17 @@ const NoteSection = ({data}) => {
             setCurrentIndex(index)
         }
     
-        //creating an auto slide that reset on index change meanwhile useEffect runs when index is changed
-        useEffect(() => {
-            const interval = setTimeout(() => {
-                setCurrentIndex(currentIndex == (images.length) - 1 ? currentIndex = 0 : currentIndex + 1)
-                
-            }, 5000);
-            
-            //clean up timeout when index is been changed
-            return () => clearTimeout(interval)
-        }, [currentIndex])
 
     return (
-        <div className="grid grid-cols-2 ">
+        <div className="w-3/4 grid grid-cols-2 mx-auto gap-5">
             <motion.div 
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 viewport={{once: true}}
                 transition={{duration: 1, type: 'tween'}}
-                className="relative before:content-['hello'] before:left-0 before:top-0 before:absolute before:w-[1px] before:h-full before:bg-border-3">
+                className="relative cursor-pointer flex flex-col justify-center gap-8 before:content-[''] before:left-0 before:top-0 before:absolute before:w-[2px] before:h-full before:bg-neutral-600">
                 {analytics_data.map((item, index) => (
-                    <div key={item.id} onClick={() => handleTExtClick(index)} className={currentIndex == index ? "flex flex-col gap-5 text-white" : 'flex flex-col gap-5 text-neutral-400 hover:text-neutral-300'}>
+                    <div key={item.id} onClick={() => handleTExtClick(index)} className={currentIndex == index ? "relative flex flex-col gap-3 text-white border-light-left ps-10 pe-24" : 'flex flex-col gap-3 text-neutral-400 hover:text-neutral-300 ps-10 pe-24'}>
                         <h3 className="text-xl"> {item.title} </h3>
                         <p className="text-sm">{item.desc}</p>
                     </div>
@@ -49,10 +39,15 @@ const NoteSection = ({data}) => {
                 whileInView={{scale: 1, opacity: 1}}
                 viewport={{once: true}}
                 transition={{duration: 0.5, type: 'tween'}}
-                className="dashboard-box"
+                className="notes-box"
             >
-                <div className="border-light-top w-full h-full bg-neutral-800 rounded-xl flex items-center justify-center">
-                    <img src={images[currentIndex]} alt="" />
+                <div className="box-content p-10 w-full h-full bg-neutral-800 rounded-xl">
+                    <motion.img
+                        key={currentIndex}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        src={images[currentIndex]} alt="" className="border-2 rounded-md h-full" 
+                    />
                 </div>
             </motion.div>
         </div>
