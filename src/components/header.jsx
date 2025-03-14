@@ -10,9 +10,9 @@ const Header = () => {
     //useEffect that runs once to make the window active
     useEffect(() => {
 
-        if(sessionStorage.getItem("showScrollBtn") === "true") {
-            setNavBorder(true);
-        }
+        // if(sessionStorage.getItem("showScrollBtn") === "true") {
+        //     setNavBorder(true);
+        // }
 
         //funtion that occur when the event takes place
         const handleScroll = () => {
@@ -20,11 +20,11 @@ const Header = () => {
             if(window.scrollY > 50) {
 
                 setNavBorder(true);
-                sessionStorage.setItem("showScrollBtn", "true")
+                // sessionStorage.setItem("showScrollBtn", "true")
             } else {
 
                 setNavBorder(false);
-                sessionStorage.removeItem("showScrollBtn")
+                // sessionStorage.removeItem("showScrollBtn")
             }
         }
 
