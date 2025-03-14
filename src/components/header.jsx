@@ -66,7 +66,7 @@ const Header = () => {
             </div>
             
             <motion.div 
-                className={navBorder ? "absolute bottom-0 left-0 w-full z-50 h-[0.5px] bg-border-gradient block" : "hidden"}
+                className={navBorder ? "absolute bottom-0 left-0 w-full h-[0.5px] bg-border-gradient block" : "hidden"}
                 initial={{scale: navBorder ? 0 : 1}}
                 animate={{scale: navBorder ? 1 : 0}}
                 transition={{duration: 0.1, type: 'tween'}}
