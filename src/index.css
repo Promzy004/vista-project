@@ -7,9 +7,9 @@
     *{
         @apply box-border;
     }
-    /* body{
+    body{
         @apply overflow-x-hidden
-    } */
+    }
 }
 
 
