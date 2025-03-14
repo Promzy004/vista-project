@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -39,24 +40,24 @@ const Header = () => {
 
     return (
         <header className="z-50 w-full bg-black text-white flex justify-between items-center lg:px-32 px-10 py-5 fixed top-0 left-0">
-            <a href="" className="md:text-2xl text-lg">
+            <Link to='/' className="md:text-2xl text-lg">
                 <img src="" alt="" />
                 Vista
-            </a>
+            </Link>
 
             <motion.nav 
                 transition={{duration: 0.5}}
                 className={nav ? 'nav-display md:animate-none animate-nav-scale origin-top' : 'nav-remove'}
             >
-                <a href="" className="link">Pricing</a>
-                <a href="" className="link">Blog</a>
-                <a href="" className="link">About</a>
-                <a href="" className="link">Contact</a>
-                <a href="" className="md:ms-5 md:mt-0 mt-7 w-full">
+                <Link to='/pricing' className="link">Pricing</Link>
+                <Link to='/blogs' className="link">Blog</Link>
+                <Link to='/about' className="link">About</Link>
+                <Link to='/contact' className="link">Contact</Link>
+                <Link to='' className="md:ms-5 md:mt-0 mt-7 w-full">
                     <button className="bg-neutral-600 py-1 px-4 rounded-full hover:bg-custom-orange duration-500 ease-in-out w-full">
                         Get started
                     </button>
-                </a>
+                </Link>
             </motion.nav>
 
             <div className="md:w-7 md:h-4 w-5 h-3 flex flex-col justify-between md:hidden cursor-pointer" onClick={() => {setNav(!nav)}}>

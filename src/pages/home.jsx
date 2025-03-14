@@ -7,6 +7,7 @@ import img3 from '../assets/images/image3.png';
 import DashboardSection from "../components/dashboard_section";
 import AnalyticSection from "../components/analytic_section";
 import NoteSection from "../components/notes_section";
+import { useState } from "react";
 
 
 const Home = () => {
@@ -78,31 +79,45 @@ const Home = () => {
         },
     ]
 
+    const[loader, setloader] = useState(true)
+    
+    
+        setTimeout(() =>{
+            setloader(false)
+        },3000)
+
 
 
     return (
         <div>
-            <Hero />
-            <TrustedTeams />
-            <section className="w-full mb-36">
-                <SubHeading text='CRM Dashboard' sub_text="Your command center for seamless lead management" desc_text="With Vista's CRM Dashboard, you can manage all of your leads from one place" />
-                <DashboardSection data={dashboard_data} />
-            </section>
-            <section className="w-full mb-36">
-                <SubHeading text="Task management" sub_text="Streamline your workflow with precision" desc_text="Stay on top of all your tasks with Vista CRM" />
-            </section>
-            <section className="w-full mb-36">
-                <SubHeading text="Analytics" sub_text="Gain actionable insights to drive your business forward" desc_text="Analyze all the data with beautiful dashboards" />
-                <AnalyticSection data={analytics_data} />
-            </section>
-            <section className="w-full mb-36">
-                <SubHeading text="Notes" sub_text="Capture meeting notes & collaborate with ease" desc_text="Organize all of your notes and contact in one central place" />
-                <NoteSection  data={notes_data}/>
-            </section>
-            <div>
-                <SubHeading text="More features" sub_text="And so much more" desc_text="Our CRM can do it all. Don't believe us? Try it yourself" />
-            </div>
-            <div></div>
+            {!loader ? 
+                <div>
+                    <Hero />
+                    <TrustedTeams />
+                    <section className="w-full mb-36">
+                        <SubHeading text='CRM Dashboard' sub_text="Your command center for seamless lead management" desc_text="With Vista's CRM Dashboard, you can manage all of your leads from one place" />
+                        <DashboardSection data={dashboard_data} />
+                    </section>
+                    <section className="w-full mb-36">
+                        <SubHeading text="Task management" sub_text="Streamline your workflow with precision" desc_text="Stay on top of all your tasks with Vista CRM" />
+                    </section>
+                    <section className="w-full mb-36">
+                        <SubHeading text="Analytics" sub_text="Gain actionable insights to drive your business forward" desc_text="Analyze all the data with beautiful dashboards" />
+                        <AnalyticSection data={analytics_data} />
+                    </section>
+                    <section className="w-full mb-36">
+                        <SubHeading text="Notes" sub_text="Capture meeting notes & collaborate with ease" desc_text="Organize all of your notes and contact in one central place" />
+                        <NoteSection  data={notes_data}/>
+                    </section>
+                    <div>
+                        <SubHeading text="More features" sub_text="And so much more" desc_text="Our CRM can do it all. Don't believe us? Try it yourself" />
+                    </div>
+                    <div></div>
+
+                </div> 
+                :
+                <div className="my-56 mx-auto w-full h-full bg-white text-center text-black">Loading ...</div>
+            }
         </div>
     );
 }
